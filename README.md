@@ -7,6 +7,7 @@
 [![CRAN version](https://www.r-pkg.org/badges/version-ago/poppr)](https://cran.r-project.org/package=poppr)
 [![CRAN check status](https://cranchecks.info/badges/worst/poppr)](https://cran.r-project.org/web/checks/check_results_poppr.html)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/poppr)](https://www.r-pkg.org/pkg/poppr)
+![pkgdown](https://github.com/zkamvar/poppr/workflows/pkgdown/badge.svg)
 
 <!-- badges: end -->
 
