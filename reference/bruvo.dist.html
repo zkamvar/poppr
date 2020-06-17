@@ -143,20 +143,20 @@
     <p>Calculate the average Bruvo's distance over all loci in a population.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist</a></span>(<span class='kw'>pop</span>, replen = <span class='fl'>1</span>, add = <span class='fl'>TRUE</span>, loss = <span class='fl'>TRUE</span>, by_locus = <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>bruvo.dist</span>(<span class='no'>pop</span>, <span class='kw'>replen</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>loss</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>by_locus</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>pop</th>
-      <td><p>a <code>genind</code> or <code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code> object</p></td>
+      <td><p>a <code>genind</code> or <code><a href='genclone-class.html'>genclone</a></code> object</p></td>
     </tr>
     <tr>
       <th>replen</th>
       <td><p>a <code>vector</code> of <code>integers</code> indicating the length of the
 nucleotide repeats for each microsatellite locus. E.g. a locus with a (CAT) 
-repeat would have a replen value of 3. (Also see <code><a href='https://rdrr.io/pkg/poppr/man/fix_replen.html'>fix_replen</a></code>)</p></td>
+repeat would have a replen value of 3. (Also see <code><a href='fix_replen.html'>fix_replen</a></code>)</p></td>
     </tr>
     <tr>
       <th>add</th>
@@ -261,7 +261,7 @@ matrices will be returned.</p></td>
   says rounding at 0.5 is to the nearest even number, meaning that it is
   possible for two alleles that are one step apart may appear to be exactly
   the same. This can be fixed by subtracting a tiny number from the repeat
-  length with the function <code><a href='https://rdrr.io/pkg/poppr/man/fix_replen.html'>fix_replen</a></code>. Please consider using
+  length with the function <code><a href='fix_replen.html'>fix_replen</a></code>. Please consider using
   this before running Bruvo's distance.</p><p></p><h3>Model Choice</h3>
 <p>The <code>add</code> and <code>loss</code> arguments 
   modify the model choice accordingly:</p><ul>
@@ -290,11 +290,8 @@ matrices will be returned.</p></td>
   13(7):2101-2106, 2004.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/poppr/man/fix_replen.html'>fix_replen</a></code>, <code><a href='https://rdrr.io/pkg/poppr/man/test_replen.html'>test_replen</a></code>,
-  <code><a href='https://rdrr.io/pkg/poppr/man/bruvo.boot.html'>bruvo.boot</a></code>, <code><a href='https://rdrr.io/pkg/poppr/man/bruvo.msn.html'>bruvo.msn</a></code></p></div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Zhian N. Kamvar</p>
+    <div class='dont-index'><p><code><a href='fix_replen.html'>fix_replen</a></code>, <code><a href='test_replen.html'>test_replen</a></code>,
+  <code><a href='bruvo.boot.html'>bruvo.boot</a></code>, <code><a href='bruvo.msn.html'>bruvo.msn</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Please note that the data presented is assuming that the nancycat dataset </span>
@@ -302,15 +299,15 @@ matrices will be returned.</p></td>
 <span class='co'># representation of the data.</span>
 
 <span class='co'># Load the nancycats dataset and construct the repeat vector.</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>nancycats</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='fu'>alleles</span>(<span class='kw'>nancycats</span>)) <span class='op'>&lt;-</span> <span class='fu'>locNames</span>(<span class='kw'>nancycats</span>) <span class='co'># small bug in this data set</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>nancycats</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='fu'>alleles</span>(<span class='no'>nancycats</span>)) <span class='kw'>&lt;-</span> <span class='fu'>locNames</span>(<span class='no'>nancycats</span>) <span class='co'># small bug in this data set</span>
 <span class='co'># Assume the alleles are all dinucleotide repeats.</span>
-<span class='kw'>ssr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>2</span>, <span class='fu'>nLoc</span>(<span class='kw'>nancycats</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/test_replen.html'>test_replen</a></span>(<span class='kw'>nancycats</span>, <span class='kw'>ssr</span>)         <span class='co'># Are the repeat lengths consistent?</span></div><div class='output co'>#&gt;  fca8 fca23 fca43 fca45 fca77 fca78 fca90 fca96 fca37 
-#&gt; FALSE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE </div><div class='input'>(<span class='kw'>ssr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/fix_replen.html'>fix_replen</a></span>(<span class='kw'>nancycats</span>, <span class='kw'>ssr</span>)) <span class='co'># Nope. We need to fix them.</span></div><div class='output co'>#&gt;    fca8   fca23   fca43   fca45   fca77   fca78   fca90   fca96   fca37 
+<span class='no'>ssr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>2</span>, <span class='fu'>nLoc</span>(<span class='no'>nancycats</span>))
+<span class='fu'><a href='test_replen.html'>test_replen</a></span>(<span class='no'>nancycats</span>, <span class='no'>ssr</span>)         <span class='co'># Are the repeat lengths consistent?</span></div><div class='output co'>#&gt;  fca8 fca23 fca43 fca45 fca77 fca78 fca90 fca96 fca37 
+#&gt; FALSE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE </div><div class='input'>(<span class='no'>ssr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='fix_replen.html'>fix_replen</a></span>(<span class='no'>nancycats</span>, <span class='no'>ssr</span>)) <span class='co'># Nope. We need to fix them.</span></div><div class='output co'>#&gt;    fca8   fca23   fca43   fca45   fca77   fca78   fca90   fca96   fca37 
 #&gt; 1.99999 2.00000 1.99999 2.00000 2.00000 2.00000 1.99999 1.99999 2.00000 </div><div class='input'>
 <span class='co'># Analyze the first population in nancycats</span>
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/popsub.html'>popsub</a></span>(<span class='kw'>nancycats</span>, <span class='fl'>1</span>), replen = <span class='kw'>ssr</span>)</div><div class='output co'>#&gt;           N215      N216      N217      N218      N219      N220      N221
+<span class='fu'>bruvo.dist</span>(<span class='fu'><a href='popsub.html'>popsub</a></span>(<span class='no'>nancycats</span>, <span class='fl'>1</span>), <span class='kw'>replen</span> <span class='kw'>=</span> <span class='no'>ssr</span>)</div><div class='output co'>#&gt;           N215      N216      N217      N218      N219      N220      N221
 #&gt; N216 0.2377930                                                            
 #&gt; N217 0.3359375 0.5029297                                                  
 #&gt; N218 0.4062195 0.5033875 0.5590007                                        
@@ -333,7 +330,7 @@ matrices will be returned.</p></td>
 <span class='co'># \dontrun{</span>
 
 <span class='co'># get the per locus estimates:</span>
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/popsub.html'>popsub</a></span>(<span class='kw'>nancycats</span>, <span class='fl'>1</span>), replen = <span class='kw'>ssr</span>, by_locus = <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $fca8
+<span class='fu'>bruvo.dist</span>(<span class='fu'><a href='popsub.html'>popsub</a></span>(<span class='no'>nancycats</span>, <span class='fl'>1</span>), <span class='kw'>replen</span> <span class='kw'>=</span> <span class='no'>ssr</span>, <span class='kw'>by_locus</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $fca8
 #&gt;          N215     N216     N217     N218     N219     N220     N221     N222
 #&gt; N216       NA                                                               
 #&gt; N217       NA       NA                                                      
@@ -512,8 +509,8 @@ matrices will be returned.</p></td>
 #&gt; N224 0.000 0.000 0.500 0.000 0.000 0.000 0.000 0.375 0.375
 #&gt; </div><div class='input'>
 <span class='co'># View each population as a heatmap.</span>
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='fu'>popNames</span>(<span class='kw'>nancycats</span>), <span class='fu'>function</span>(<span class='kw'>x</span>) 
-<span class='fu'><a href='https://rdrr.io/r/stats/heatmap.html'>heatmap</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/popsub.html'>popsub</a></span>(<span class='kw'>nancycats</span>, <span class='kw'>x</span>), replen = <span class='kw'>ssr</span>)), symm=<span class='fl'>TRUE</span>))</div><div class='img'><img src='bruvo.dist-1.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-2.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-3.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-4.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-5.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-6.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-7.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-8.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-9.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-10.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-11.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-12.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-13.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-14.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-15.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-16.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-17.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;        P01        P02        P03        P04        P05        P06       
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='fu'>popNames</span>(<span class='no'>nancycats</span>), <span class='kw'>function</span>(<span class='no'>x</span>)
+<span class='fu'><a href='https://rdrr.io/r/stats/heatmap.html'>heatmap</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='fu'>bruvo.dist</span>(<span class='fu'><a href='popsub.html'>popsub</a></span>(<span class='no'>nancycats</span>, <span class='no'>x</span>), <span class='kw'>replen</span> <span class='kw'>=</span> <span class='no'>ssr</span>)), <span class='kw'>symm</span><span class='kw'>=</span><span class='fl'>TRUE</span>))</div><div class='img'><img src='bruvo.dist-1.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-2.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-3.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-4.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-5.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-6.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-7.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-8.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-9.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-10.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-11.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-12.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-13.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-14.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-15.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-16.png' alt='' width='700' height='433' /></div><div class='img'><img src='bruvo.dist-17.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;        P01        P02        P03        P04        P05        P06       
 #&gt; rowInd Integer,10 Integer,22 Integer,12 Integer,23 Integer,15 Integer,11
 #&gt; colInd Integer,10 Integer,22 Integer,12 Integer,23 Integer,15 Integer,11
 #&gt; Rowv   NULL       NULL       NULL       NULL       NULL       NULL      
@@ -527,7 +524,8 @@ matrices will be returned.</p></td>
 #&gt; rowInd Integer,13 Integer,17 Integer,11 Integer,12 Integer,13
 #&gt; colInd Integer,13 Integer,17 Integer,11 Integer,12 Integer,13
 #&gt; Rowv   NULL       NULL       NULL       NULL       NULL      
-#&gt; Colv   NULL       NULL       NULL       NULL       NULL      </div><div class='input'><span class='co'># }</span></div></pre>
+#&gt; Colv   NULL       NULL       NULL       NULL       NULL      </div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -543,7 +541,7 @@ matrices will be returned.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

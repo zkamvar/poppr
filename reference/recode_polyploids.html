@@ -156,19 +156,19 @@ able to calculate Bruvo's distance, the index of association, and genotypic
 diversity statistics. The tradeoff was the fact that this broke all other 
 analyses as they relied on allele frequencies and the missing alleles are 
 treated as extra alleles. This function removes those alleles and returns a 
-<code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code> or <code>genind</code> object where 
+<code><a href='genclone-class.html'>genclone</a></code> or <code>genind</code> object where 
 allele frequencies are coded based on the number of alleles observed at a 
 single locus per individual. See the examples for more details.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/recode_polyploids.html'>recode_polyploids</a></span>(<span class='kw'>poly</span>, newploidy = <span class='fl'>FALSE</span>, addzero = <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>recode_polyploids</span>(<span class='no'>poly</span>, <span class='kw'>newploidy</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>addzero</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>poly</th>
-      <td><p>a <code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code>, <code>genind</code>, or 
+      <td><p>a <code><a href='genclone-class.html'>genclone</a></code>, <code>genind</code>, or 
 <code>genpop</code> object that has a ploidy of &gt; 2</p></td>
     </tr>
     <tr>
@@ -188,7 +188,7 @@ loci to allow conversion to genpop objects. Defaults to <code>FALSE</code>.</p><
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a <code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code>, <code>genind</code>, or
+    <p>a <code><a href='genclone-class.html'>genclone</a></code>, <code>genind</code>, or
   <code>genpop</code> object.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
@@ -235,37 +235,35 @@ data set.</p>
     <p>This is an approximation, and a bad one at that. <span class="pkg">Poppr</span> was not
 originally intended for polyploids, but with the inclusion of Bruvo's
 distance, it only made sense to attempt something beyond single use.</p>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Zhian N. Kamvar</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>Pinf</span>)
-<span class='kw'>iPinf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/recode_polyploids.html'>recode_polyploids</a></span>(<span class='kw'>Pinf</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Pinf</span>)
+<span class='no'>iPinf</span> <span class='kw'>&lt;-</span> <span class='fu'>recode_polyploids</span>(<span class='no'>Pinf</span>)
 
 <span class='co'># Note that the difference between the number of alleles.</span>
-<span class='fu'>nAll</span>(<span class='kw'>Pinf</span>)</div><div class='output co'>#&gt; Pi02  D13 Pi33 Pi04 Pi4B Pi16  G11 Pi56 Pi63 Pi70 Pi89 
-#&gt;   11   26    3    5    8    7   22    4    4    4   12 </div><div class='input'><span class='fu'>nAll</span>(<span class='kw'>iPinf</span>)</div><div class='output co'>#&gt; Pi02  D13 Pi33 Pi04 Pi4B Pi16  G11 Pi56 Pi63 Pi70 Pi89 
+<span class='fu'>nAll</span>(<span class='no'>Pinf</span>)</div><div class='output co'>#&gt; Pi02  D13 Pi33 Pi04 Pi4B Pi16  G11 Pi56 Pi63 Pi70 Pi89 
+#&gt;   11   26    3    5    8    7   22    4    4    4   12 </div><div class='input'><span class='fu'>nAll</span>(<span class='no'>iPinf</span>)</div><div class='output co'>#&gt; Pi02  D13 Pi33 Pi04 Pi4B Pi16  G11 Pi56 Pi63 Pi70 Pi89 
 #&gt;   10   25    2    4    7    6   21    3    3    3   11 </div><div class='input'>
 <span class='co'># \dontrun{</span>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'><a href='http://ape-package.ird.fr'>"ape"</a></span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'>"ape"</span>)
 
 <span class='co'># Removing missing data. </span>
-<span class='fu'>setPop</span>(<span class='kw'>Pinf</span>) <span class='op'>&lt;-</span> <span class='op'>~</span><span class='kw'>Country</span>
+<span class='fu'>setPop</span>(<span class='no'>Pinf</span>) <span class='kw'>&lt;-</span> ~<span class='no'>Country</span>
 
 <span class='co'># Calculating Rogers' distance. </span>
-<span class='kw'>rog</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>rogers.dist</a></span>(<span class='fu'>genind2genpop</span>(<span class='kw'>Pinf</span>))</div><div class='output co'>#&gt; 
+<span class='no'>rog</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='genetic_distance.html'>rogers.dist</a></span>(<span class='fu'>genind2genpop</span>(<span class='no'>Pinf</span>))</div><div class='output co'>#&gt; 
 #&gt;  Converting data from a genind to a genpop object... 
 #&gt; 
 #&gt; ...done.
-#&gt; </div><div class='input'><span class='kw'>irog</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>rogers.dist</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/recode_polyploids.html'>recode_polyploids</a></span>(<span class='fu'>genind2genpop</span>(<span class='kw'>Pinf</span>)))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='no'>irog</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='genetic_distance.html'>rogers.dist</a></span>(<span class='fu'>recode_polyploids</span>(<span class='fu'>genind2genpop</span>(<span class='no'>Pinf</span>)))</div><div class='output co'>#&gt; 
 #&gt;  Converting data from a genind to a genpop object... 
 #&gt; 
 #&gt; ...done.
 #&gt; </div><div class='input'>
 <span class='co'># We will now plot neighbor joining trees. Note the decreased distance in the</span>
 <span class='co'># original data.</span>
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/ape/man/nj.html'>nj</a></span>(<span class='kw'>rog</span>), type = <span class='st'>"unrooted"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/ape/man/add.scale.bar.html'>add.scale.bar</a></span>(lcol = <span class='st'>"red"</span>, length = <span class='fl'>0.02</span>)</div><div class='img'><img src='recode_polyploids-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/ape/man/nj.html'>nj</a></span>(<span class='kw'>irog</span>), type = <span class='st'>"unrooted"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/ape/man/add.scale.bar.html'>add.scale.bar</a></span>(lcol = <span class='st'>"red"</span>, length = <span class='fl'>0.02</span>)</div><div class='img'><img src='recode_polyploids-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># }</span></div></pre>
+<span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/ape/man/nj.html'>nj</a></span>(<span class='no'>rog</span>), <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"unrooted"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/ape/man/add.scale.bar.html'>add.scale.bar</a></span>(<span class='kw'>lcol</span> <span class='kw'>=</span> <span class='st'>"red"</span>, <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>0.02</span>)</div><div class='img'><img src='recode_polyploids-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/ape/man/nj.html'>nj</a></span>(<span class='no'>irog</span>), <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"unrooted"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/ape/man/add.scale.bar.html'>add.scale.bar</a></span>(<span class='kw'>lcol</span> <span class='kw'>=</span> <span class='st'>"red"</span>, <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>0.02</span>)</div><div class='img'><img src='recode_polyploids-2.png' alt='' width='700' height='433' /></div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -281,7 +279,7 @@ distance, it only made sense to attempt something beyond single use.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

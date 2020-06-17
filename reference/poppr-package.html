@@ -165,7 +165,7 @@ genlight object. Genind objects store genetic
 information in a table of allele frequencies while genlight objects store
 SNP data efficiently by packing binary allele calls into single bits.
 <span class="pkg">Poppr</span> has extended these object into new objects called
-<a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a> and <a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>snpclone</a>,
+<a href='genclone-class.html'>genclone</a> and <a href='genclone-class.html'>snpclone</a>,
 respectively. These objects are designed for analysis of clonal organisms
 as they add the <strong>@mlg</strong> slot for keeping track of multilocus
 genotypes and multilocus lineages.</p>
@@ -175,9 +175,9 @@ typing <code>?function_name</code> in the R console. Detailed topic explanations
 live in the package vignettes:</p>
 <table class='table'>
 <tr><td><strong>Vignette</strong></td><td><strong>command</strong></td></tr>
-<tr><td>Data import and manipulation</td><td><code>vignette("poppr_manual", "poppr")</code></td></tr>
+<tr><td>Data import and manipulation</td><td><code><a href='../articles/poppr_manual.html'>vignette("poppr_manual", "poppr")</a></code></td></tr>
 <tr><td>Algorithms and Equations</td><td><code>vignette("algo", "poppr")</code></td></tr>
-<tr><td>Multilocus Genotype Analysis</td><td><code>vignette("mlg", "poppr")</code></td></tr>
+<tr><td>Multilocus Genotype Analysis</td><td><code><a href='../articles/mlg.html'>vignette("mlg", "poppr")</a></code></td></tr>
 </table>
 
 
@@ -213,7 +213,7 @@ available. The functions are documented as:</p><ul>
 <p>Where &#8216;data type&#8217; refers to the type of data that can be used:</p><table class='table'>
 <tr><td><strong>m</strong></td><td>a genclone or genind object</td></tr>
 <tr><td><strong>s</strong></td><td>a snpclone or genlight object</td></tr>
-<tr><td><strong>x</strong></td><td>a different data type (e.g. a matrix from <code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table()</a></code>)</td></tr>
+<tr><td><strong>x</strong></td><td>a different data type (e.g. a matrix from <code><a href='mlg.html'>mlg.table()</a></code>)</td></tr>
 </table>
 
 
@@ -222,12 +222,12 @@ available. The functions are documented as:</p><ul>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/getfile.html'>getfile()</a></code> (x) - Provides a quick GUI to grab files for import</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/read.genalex.html'>read.genalex()</a></code> (x) - Reads GenAlEx formatted csv files to a genind object</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genind2genalex.html'>genind2genalex()</a></code> (m) - Converts genind objects to GenAlEx formatted csv files</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/coercion-methods.html'>genclone2genind()</a></code> (m) - Removes the @mlg slot from genclone objects</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/coercion-methods.html'>as.genambig()</a></code> (m) - Converts genind data to <span class="pkg">polysat</span>'s <a href='https://rdrr.io/pkg/polysat/man/genambig-class.html'>genambig</a> data structure.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/coercion-methods.html'>bootgen2genind()</a></code> (x) - see <code><a href='https://rdrr.io/pkg/poppr/man/aboot.html'>aboot()</a></code> for details)</p></li>
+<li><p><code><a href='getfile.html'>getfile()</a></code> (x) - Provides a quick GUI to grab files for import</p></li>
+<li><p><code><a href='read.genalex.html'>read.genalex()</a></code> (x) - Reads GenAlEx formatted csv files to a genind object</p></li>
+<li><p><code><a href='genind2genalex.html'>genind2genalex()</a></code> (m) - Converts genind objects to GenAlEx formatted csv files</p></li>
+<li><p><code><a href='coercion-methods.html'>genclone2genind()</a></code> (m) - Removes the @mlg slot from genclone objects</p></li>
+<li><p><code><a href='coercion-methods.html'>as.genambig()</a></code> (m) - Converts genind data to <span class="pkg">polysat</span>'s <a href='https://rdrr.io/pkg/polysat/man/genambig-class.html'>genambig</a> data structure.</p></li>
+<li><p><code><a href='coercion-methods.html'>bootgen2genind()</a></code> (x) - see <code><a href='aboot.html'>aboot()</a></code> for details)</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="data-structures"><a class="anchor" href="#data-structures"></a>Data Structures</h2>
@@ -240,15 +240,15 @@ available. The functions are documented as:</p><ul>
 Both of these data structures are defined by the presence of an extra
 MLG slot representing multilocus genotype assignments, which can be a numeric
 vector or a MLG class object.</p><ul>
-<li><p><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a> - Handles microsatellite, presence/absence, and small SNP data sets</p></li>
-<li><p><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>snpclone</a> - Designed to handle larger binary SNP data sets.</p></li>
-<li><p><a href='https://rdrr.io/pkg/poppr/man/MLG-class.html'>MLG</a> - An internal class holding a data frame of multilocus genotype
+<li><p><a href='genclone-class.html'>genclone</a> - Handles microsatellite, presence/absence, and small SNP data sets</p></li>
+<li><p><a href='genclone-class.html'>snpclone</a> - Designed to handle larger binary SNP data sets.</p></li>
+<li><p><a href='MLG-class.html'>MLG</a> - An internal class holding a data frame of multilocus genotype
 assignments that acts like a vector, allowing the user to easily switch
 between different MLG definitions.</p></li>
-<li><p><a href='https://rdrr.io/pkg/poppr/man/bootgen-class.html'>bootgen</a> - An internal class used explicitly for <code><a href='https://rdrr.io/pkg/poppr/man/aboot.html'>aboot()</a></code> that
+<li><p><a href='bootgen-class.html'>bootgen</a> - An internal class used explicitly for <code><a href='aboot.html'>aboot()</a></code> that
 inherits the <a href='https://rdrr.io/pkg/adegenet/man/virClasses.html'>gen-class</a> virtual object. It is
 designed to allow for sampling loci with replacement.</p></li>
-<li><p><a href='https://rdrr.io/pkg/poppr/man/bruvomat-class.html'>bruvomat</a> - An internal class designed to handle bootstrapping for
+<li><p><a href='bruvomat-class.html'>bruvomat</a> - An internal class designed to handle bootstrapping for
 Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
 </ul>
 
@@ -257,16 +257,16 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/coercion-methods.html'>as.genclone()</a></code> (m) - Converts genind objects to genclone objects</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/missingno.html'>missingno()</a></code> (m) - Handles missing data</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/clonecorrect.html'>clonecorrect()</a></code> (m | s) - Clone-censors at a specified population hierarchy</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/informloci.html'>informloci()</a></code> (m) - Detects and removes phylogenetically uninformative loci</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/popsub.html'>popsub()</a></code> (m | s) - Subsets genind objects by population</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/shufflepop.html'>shufflepop()</a></code> (m) - Shuffles genotypes at each locus using four different shuffling algorithms</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/recode_polyploids.html'>recode_polyploids()</a></code> (m | x) - Recodes polyploid data sets with missing alleles imported as "0"</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/make_haplotypes-method.html'>make_haplotypes()</a></code> (m | s) - Splits data into pseudo-haplotypes. This is mainly used in AMOVA.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/test_replen.html'>test_replen()</a></code> (m) - Tests for inconsistent repeat lengths in microsatellite data. For use in <code><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist()</a></code> functions.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/fix_replen.html'>fix_replen()</a></code> (m) - Fixes inconsistent repeat lengths. For use in <code><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist()</a></code> functions.</p></li>
+<li><p><code><a href='coercion-methods.html'>as.genclone()</a></code> (m) - Converts genind objects to genclone objects</p></li>
+<li><p><code><a href='missingno.html'>missingno()</a></code> (m) - Handles missing data</p></li>
+<li><p><code><a href='clonecorrect.html'>clonecorrect()</a></code> (m | s) - Clone-censors at a specified population hierarchy</p></li>
+<li><p><code><a href='informloci.html'>informloci()</a></code> (m) - Detects and removes phylogenetically uninformative loci</p></li>
+<li><p><code><a href='popsub.html'>popsub()</a></code> (m | s) - Subsets genind objects by population</p></li>
+<li><p><code><a href='shufflepop.html'>shufflepop()</a></code> (m) - Shuffles genotypes at each locus using four different shuffling algorithms</p></li>
+<li><p><code><a href='recode_polyploids.html'>recode_polyploids()</a></code> (m | x) - Recodes polyploid data sets with missing alleles imported as "0"</p></li>
+<li><p><code><a href='make_haplotypes-method.html'>make_haplotypes()</a></code> (m | s) - Splits data into pseudo-haplotypes. This is mainly used in AMOVA.</p></li>
+<li><p><code><a href='test_replen.html'>test_replen()</a></code> (m) - Tests for inconsistent repeat lengths in microsatellite data. For use in <code><a href='bruvo.dist.html'>bruvo.dist()</a></code> functions.</p></li>
+<li><p><code><a href='fix_replen.html'>fix_replen()</a></code> (m) - Fixes inconsistent repeat lengths. For use in <code><a href='bruvo.dist.html'>bruvo.dist()</a></code> functions.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="genetic-distances"><a class="anchor" href="#genetic-distances"></a>Genetic distances</h2>
@@ -274,14 +274,14 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/bruvo.dist.html'>bruvo.dist()</a></code> (m) - Bruvo's distance (see also: <code><a href='https://rdrr.io/pkg/poppr/man/fix_replen.html'>fix_replen()</a></code>)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/diss.dist.html'>diss.dist()</a></code> (m) - Absolute genetic distance (see <code><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>prevosti.dist()</a></code>)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>nei.dist()</a></code> (m | x) - Nei's 1978 genetic distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>rogers.dist()</a></code> (m | x) - Rogers' euclidean distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>reynolds.dist()</a></code> (m | x) - Reynolds' coancestry distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>edwards.dist()</a></code> (m | x) - Edwards' angular distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genetic_distance.html'>prevosti.dist()</a></code> (m | x) - Prevosti's absolute genetic distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/bitwise.dist.html'>bitwise.dist()</a></code> (s) - Calculates fast pairwise distances for genlight objects.</p></li>
+<li><p><code><a href='bruvo.dist.html'>bruvo.dist()</a></code> (m) - Bruvo's distance (see also: <code><a href='fix_replen.html'>fix_replen()</a></code>)</p></li>
+<li><p><code><a href='diss.dist.html'>diss.dist()</a></code> (m) - Absolute genetic distance (see <code><a href='genetic_distance.html'>prevosti.dist()</a></code>)</p></li>
+<li><p><code><a href='genetic_distance.html'>nei.dist()</a></code> (m | x) - Nei's 1978 genetic distance</p></li>
+<li><p><code><a href='genetic_distance.html'>rogers.dist()</a></code> (m | x) - Rogers' euclidean distance</p></li>
+<li><p><code><a href='genetic_distance.html'>reynolds.dist()</a></code> (m | x) - Reynolds' coancestry distance</p></li>
+<li><p><code><a href='genetic_distance.html'>edwards.dist()</a></code> (m | x) - Edwards' angular distance</p></li>
+<li><p><code><a href='genetic_distance.html'>prevosti.dist()</a></code> (m | x) - Prevosti's absolute genetic distance</p></li>
+<li><p><code><a href='bitwise.dist.html'>bitwise.dist()</a></code> (s) - Calculates fast pairwise distances for genlight objects.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="bootstrapping"><a class="anchor" href="#bootstrapping"></a>Bootstrapping</h2>
@@ -289,11 +289,11 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/aboot.html'>aboot()</a></code> (m | s | x) - Creates a bootstrapped dendrogram for any distance measure</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/bruvo.boot.html'>bruvo.boot()</a></code> (m) - Produces dendrograms with bootstrap support based on Bruvo's distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/diversity_boot.html'>diversity_boot()</a></code> (x) - Generates boostrap distributions of diversity statistics for multilocus genotypes</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/diversity_ci.html'>diversity_ci()</a></code> (m | s | x) - Generates confidence intervals for multilocus genotype diversity.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>resample.ia()</a></code> (m) - Calculates the index of association over subsets of data.</p></li>
+<li><p><code><a href='aboot.html'>aboot()</a></code> (m | s | x) - Creates a bootstrapped dendrogram for any distance measure</p></li>
+<li><p><code><a href='bruvo.boot.html'>bruvo.boot()</a></code> (m) - Produces dendrograms with bootstrap support based on Bruvo's distance</p></li>
+<li><p><code><a href='diversity_boot.html'>diversity_boot()</a></code> (x) - Generates boostrap distributions of diversity statistics for multilocus genotypes</p></li>
+<li><p><code><a href='diversity_ci.html'>diversity_ci()</a></code> (m | s | x) - Generates confidence intervals for multilocus genotype diversity.</p></li>
+<li><p><code><a href='ia.html'>resample.ia()</a></code> (m) - Calculates the index of association over subsets of data.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="multilocus-genotypes"><a class="anchor" href="#multilocus-genotypes"></a>Multilocus Genotypes</h2>
@@ -301,20 +301,20 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg()</a></code> (m | s) - Calculates the number of multilocus genotypes</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mll-method.html'>mll()</a></code> (m | s) - Displays the current multilocus lineages (genotypes) defined.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mll-method.html'>nmll()</a></code> (m | s) - Same as <code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg()</a></code>.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.crosspop()</a></code> (m | s) - Finds all multilocus genotypes that cross populations</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table()</a></code> (m | s) - Returns a table of populations by multilocus genotypes</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.vector()</a></code> (m | s) - Returns a vector of a numeric multilocus genotype assignment for each individual</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.id()</a></code> (m | s) - Finds all individuals associated with a single multilocus genotype</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mlg.filter.html'>mlg.filter()</a></code> (m | s) - Collapses MLGs by genetic distance</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/filter_stats.html'>filter_stats()</a></code> (m | s) - Calculates mlg.filter for all algorithms and plots</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/cutoff_predictor.html'>cutoff_predictor()</a></code> (x) - Predicts cutoff threshold from mlg.filter.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mll.custom.html'>mll.custom()</a></code> (m | s) - Allows for the custom definition of multilocus lineages</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mll.custom.html'>mll.levels()</a></code> (m | s) - Allows the user to change levels of custom MLLs.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/mll.reset-method.html'>mll.reset()</a></code> (m | s) - Reset multilocus lineages.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/diversity_stats.html'>diversity_stats()</a></code> (x) - Creates a table of diversity indices for multilocus genotypes.</p></li>
+<li><p><code><a href='mlg.html'>mlg()</a></code> (m | s) - Calculates the number of multilocus genotypes</p></li>
+<li><p><code><a href='mll-method.html'>mll()</a></code> (m | s) - Displays the current multilocus lineages (genotypes) defined.</p></li>
+<li><p><code><a href='mll-method.html'>nmll()</a></code> (m | s) - Same as <code><a href='mlg.html'>mlg()</a></code>.</p></li>
+<li><p><code><a href='mlg.html'>mlg.crosspop()</a></code> (m | s) - Finds all multilocus genotypes that cross populations</p></li>
+<li><p><code><a href='mlg.html'>mlg.table()</a></code> (m | s) - Returns a table of populations by multilocus genotypes</p></li>
+<li><p><code><a href='mlg.html'>mlg.vector()</a></code> (m | s) - Returns a vector of a numeric multilocus genotype assignment for each individual</p></li>
+<li><p><code><a href='mlg.html'>mlg.id()</a></code> (m | s) - Finds all individuals associated with a single multilocus genotype</p></li>
+<li><p><code><a href='mlg.filter.html'>mlg.filter()</a></code> (m | s) - Collapses MLGs by genetic distance</p></li>
+<li><p><code><a href='filter_stats.html'>filter_stats()</a></code> (m | s) - Calculates mlg.filter for all algorithms and plots</p></li>
+<li><p><code><a href='cutoff_predictor.html'>cutoff_predictor()</a></code> (x) - Predicts cutoff threshold from mlg.filter.</p></li>
+<li><p><code><a href='mll.custom.html'>mll.custom()</a></code> (m | s) - Allows for the custom definition of multilocus lineages</p></li>
+<li><p><code><a href='mll.custom.html'>mll.levels()</a></code> (m | s) - Allows the user to change levels of custom MLLs.</p></li>
+<li><p><code><a href='mll.reset-method.html'>mll.reset()</a></code> (m | s) - Reset multilocus lineages.</p></li>
+<li><p><code><a href='diversity_stats.html'>diversity_stats()</a></code> (x) - Creates a table of diversity indices for multilocus genotypes.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="index-of-association-analysis"><a class="anchor" href="#index-of-association-analysis"></a>Index of Association Analysis</h2>
@@ -323,10 +323,10 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
 
 
 <p>Analysis of multilocus linkage disequilibrium.</p><ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>ia()</a></code> (m) - Calculates the index of association</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>pair.ia()</a></code> (m) - Calculates the index of association for all loci pairs.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/win.ia.html'>win.ia()</a></code> (s) - Index of association windows for genlight objects.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/samp.ia.html'>samp.ia()</a></code> (s) - Index of association on random subsets of loci for genlight objects.</p></li>
+<li><p><code><a href='ia.html'>ia()</a></code> (m) - Calculates the index of association</p></li>
+<li><p><code><a href='ia.html'>pair.ia()</a></code> (m) - Calculates the index of association for all loci pairs.</p></li>
+<li><p><code><a href='win.ia.html'>win.ia()</a></code> (s) - Index of association windows for genlight objects.</p></li>
+<li><p><code><a href='samp.ia.html'>samp.ia()</a></code> (s) - Index of association on random subsets of loci for genlight objects.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="population-genetic-analysis"><a class="anchor" href="#population-genetic-analysis"></a>Population Genetic Analysis</h2>
@@ -334,17 +334,17 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/poppr.amova.html'>poppr.amova()</a></code> (m | s) - Analysis of Molecular Variance (as implemented in ade4)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr()</a></code> (m | x) - Returns a diversity table by population</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/poppr.all.html'>poppr.all()</a></code> (m | x) - Returns a diversity table by population for all compatible files specified</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/private_alleles.html'>private_alleles()</a></code> (m) - Tabulates the occurrences of alleles that only occur in one population.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/locus_table.html'>locus_table()</a></code> (m) - Creates a table of summary statistics per locus.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/rrmlg.html'>rrmlg()</a></code> (m | x) - Round-robin multilocus genotype estimates.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/rraf.html'>rraf()</a></code> (m) - Round-robin allele frequency estimates.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/pgen.html'>pgen()</a></code> (m) - Probability of genotypes.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/psex.html'>psex()</a></code> (m) - Probability of observing a genotype more than once.</p></li>
-<li><p><a href='https://rdrr.io/pkg/poppr/man/rare_allele_correction.html'>rare_allele_correction</a> (m) - rules for correcting rare alleles for round-robin estimates.</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/incomp.html'>incomp()</a></code> (m) - Check data for incomparable samples.</p></li>
+<li><p><code><a href='poppr.amova.html'>poppr.amova()</a></code> (m | s) - Analysis of Molecular Variance (as implemented in ade4)</p></li>
+<li><p><code><a href='poppr.html'>poppr()</a></code> (m | x) - Returns a diversity table by population</p></li>
+<li><p><code><a href='poppr.all.html'>poppr.all()</a></code> (m | x) - Returns a diversity table by population for all compatible files specified</p></li>
+<li><p><code><a href='private_alleles.html'>private_alleles()</a></code> (m) - Tabulates the occurrences of alleles that only occur in one population.</p></li>
+<li><p><code><a href='locus_table.html'>locus_table()</a></code> (m) - Creates a table of summary statistics per locus.</p></li>
+<li><p><code><a href='rrmlg.html'>rrmlg()</a></code> (m | x) - Round-robin multilocus genotype estimates.</p></li>
+<li><p><code><a href='rraf.html'>rraf()</a></code> (m) - Round-robin allele frequency estimates.</p></li>
+<li><p><code><a href='pgen.html'>pgen()</a></code> (m) - Probability of genotypes.</p></li>
+<li><p><code><a href='psex.html'>psex()</a></code> (m) - Probability of observing a genotype more than once.</p></li>
+<li><p><a href='rare_allele_correction.html'>rare_allele_correction</a> (m) - rules for correcting rare alleles for round-robin estimates.</p></li>
+<li><p><code><a href='incomp.html'>incomp()</a></code> (m) - Check data for incomparable samples.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="visualization"><a class="anchor" href="#visualization"></a>Visualization</h2>
@@ -352,13 +352,13 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/imsn.html'>imsn()</a></code> (m | s) - Interactive construction and visualization of minimum spanning networks</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/plot_poppr_msn.html'>plot_poppr_msn()</a></code> (m | s | x) - Plots minimum spanning networks produced in poppr with scale bar and legend</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/greycurve.html'>greycurve()</a></code> (x) - Helper to determine the appropriate parameters for adjusting the grey level for msn functions</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/bruvo.msn.html'>bruvo.msn()</a></code> (m) - Produces minimum spanning networks based off Bruvo's distance colored by population</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/poppr.msn.html'>poppr.msn()</a></code> (m | s | x) - Produces a minimum spanning network for any pairwise distance matrix related to the data</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/info_table.html'>info_table()</a></code> (m) - Creates a heatmap representing missing data or observed ploidy</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/genotype_curve.html'>genotype_curve()</a></code> (m | x) - Creates a series of boxplots to demonstrate how many markers are needed to represent the diversity of your data.</p></li>
+<li><p><code><a href='imsn.html'>imsn()</a></code> (m | s) - Interactive construction and visualization of minimum spanning networks</p></li>
+<li><p><code><a href='plot_poppr_msn.html'>plot_poppr_msn()</a></code> (m | s | x) - Plots minimum spanning networks produced in poppr with scale bar and legend</p></li>
+<li><p><code><a href='greycurve.html'>greycurve()</a></code> (x) - Helper to determine the appropriate parameters for adjusting the grey level for msn functions</p></li>
+<li><p><code><a href='bruvo.msn.html'>bruvo.msn()</a></code> (m) - Produces minimum spanning networks based off Bruvo's distance colored by population</p></li>
+<li><p><code><a href='poppr.msn.html'>poppr.msn()</a></code> (m | s | x) - Produces a minimum spanning network for any pairwise distance matrix related to the data</p></li>
+<li><p><code><a href='info_table.html'>info_table()</a></code> (m) - Creates a heatmap representing missing data or observed ploidy</p></li>
+<li><p><code><a href='genotype_curve.html'>genotype_curve()</a></code> (m | x) - Creates a series of boxplots to demonstrate how many markers are needed to represent the diversity of your data.</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="datasets"><a class="anchor" href="#datasets"></a>Datasets</h2>
@@ -366,11 +366,11 @@ Bruvo's distance where blocks of integer loci can be shuffled.</p></li>
     
 
 <ul>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/Aeut.html'>Aeut()</a></code> - (AFLP) Oomycete root rot pathogen <em>Aphanomyces euteiches</em> (Grünwald and Hoheisel, 2006)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/monpop.html'>monpop()</a></code> - (SSR) Peach brown rot pathogen <em>Monilinia fructicola</em> (Everhart and Scherm, 2015)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/partial_clone.html'>partial_clone()</a></code> - (SSR) partially-clonal data simulated via simuPOP (Peng and Amos, 2008)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/Pinf.html'>Pinf()</a></code> - (SSR) Potato late blight pathogen <em>Phytophthora infestans</em> (Goss et. al., 2014)</p></li>
-<li><p><code><a href='https://rdrr.io/pkg/poppr/man/Pram.html'>Pram()</a></code> - (SSR) Sudden Oak Death pathogen <em>Phytophthora ramorum</em> (Kamvar et. al., 2015; Goss et. al., 2009)</p></li>
+<li><p><code><a href='Aeut.html'>Aeut()</a></code> - (AFLP) Oomycete root rot pathogen <em>Aphanomyces euteiches</em> (Grünwald and Hoheisel, 2006)</p></li>
+<li><p><code><a href='monpop.html'>monpop()</a></code> - (SSR) Peach brown rot pathogen <em>Monilinia fructicola</em> (Everhart and Scherm, 2015)</p></li>
+<li><p><code><a href='partial_clone.html'>partial_clone()</a></code> - (SSR) partially-clonal data simulated via simuPOP (Peng and Amos, 2008)</p></li>
+<li><p><code><a href='Pinf.html'>Pinf()</a></code> - (SSR) Potato late blight pathogen <em>Phytophthora infestans</em> (Goss et. al., 2014)</p></li>
+<li><p><code><a href='Pram.html'>Pram()</a></code> - (SSR) Sudden Oak Death pathogen <em>Phytophthora ramorum</em> (Kamvar et. al., 2015; Goss et. al., 2009)</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -408,11 +408,6 @@ death pathogen in Oregon forests. Phytopathology 105:982-989. doi:
 J. 2009. Population genetic analysis infers migration pathways of
 <em>Phytophthora ramorum</em> in US nurseries. PLoS Pathog. 5:e1000583. doi:
 <a href='https://doi.org/10.1371/journal.ppat.1000583'>10.1371/journal.ppat.1000583</a></p>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Zhian N. Kamvar, Jonah C. Brooks, Sydney E. Everhart, Javier F.
-Tabima, Stacy Krueger-Hadfield, Erik Sotka, Niklaus J. Grünwald</p>
-<p>Maintainer: Zhian N. Kamvar</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -429,7 +424,7 @@ Tabima, Stacy Krueger-Hadfield, Erik Sotka, Niklaus J. Grünwald</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

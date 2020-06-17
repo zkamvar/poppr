@@ -149,36 +149,36 @@ details)." />
 
     <div class="ref-description">
     <p>For the <span class="pkg">poppr</span> package description, please see
-<code><a href='https://rdrr.io/pkg/poppr/man/poppr-package.html'>package?poppr</a></code></p>
+<code><a href='poppr-package.html'>package?poppr</a></code></p>
 <p>This function allows the user to quickly view indices of heterozygosity, 
 evenness, and linkage to aid in the decision of a path to further analyze 
 a specified dataset. It natively takes <code>genind</code> and 
-<code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code> objects, but can convert any raw data formats 
+<code><a href='genclone-class.html'>genclone</a></code> objects, but can convert any raw data formats 
 that adegenet can take (fstat, structure, genetix, and genpop) as well as 
-genalex files exported into a csv format (see <code><a href='https://rdrr.io/pkg/poppr/man/read.genalex.html'>read.genalex</a></code> for 
+genalex files exported into a csv format (see <code><a href='read.genalex.html'>read.genalex</a></code> for 
 details).</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr</a></span>(
-  <span class='kw'>dat</span>,
-  total = <span class='fl'>TRUE</span>,
-  sublist = <span class='st'>"ALL"</span>,
-  exclude = <span class='kw'>NULL</span>,
-  blacklist = <span class='kw'>NULL</span>,
-  sample = <span class='fl'>0</span>,
-  method = <span class='fl'>1</span>,
-  missing = <span class='st'>"ignore"</span>,
-  cutoff = <span class='fl'>0.05</span>,
-  quiet = <span class='fl'>FALSE</span>,
-  clonecorrect = <span class='fl'>FALSE</span>,
-  strata = <span class='fl'>1</span>,
-  keep = <span class='fl'>1</span>,
-  plot = <span class='fl'>TRUE</span>,
-  hist = <span class='fl'>TRUE</span>,
-  index = <span class='st'>"rbarD"</span>,
-  minsamp = <span class='fl'>10</span>,
-  legend = <span class='fl'>FALSE</span>,
-  <span class='kw'>...</span>
+    <pre class="usage"><span class='fu'>poppr</span>(
+  <span class='no'>dat</span>,
+  <span class='kw'>total</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>sublist</span> <span class='kw'>=</span> <span class='st'>"ALL"</span>,
+  <span class='kw'>exclude</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>blacklist</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sample</span> <span class='kw'>=</span> <span class='fl'>0</span>,
+  <span class='kw'>method</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>missing</span> <span class='kw'>=</span> <span class='st'>"ignore"</span>,
+  <span class='kw'>cutoff</span> <span class='kw'>=</span> <span class='fl'>0.05</span>,
+  <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>clonecorrect</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>strata</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>keep</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>hist</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>index</span> <span class='kw'>=</span> <span class='st'>"rbarD"</span>,
+  <span class='kw'>minsamp</span> <span class='kw'>=</span> <span class='fl'>10</span>,
+  <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='no'>...</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -187,7 +187,7 @@ details).</p>
     <tr>
       <th>dat</th>
       <td><p>a <code>genind</code> object OR a 
-<code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code> object OR any fstat, structure, genetix, 
+<code><a href='genclone-class.html'>genclone</a></code> object OR any fstat, structure, genetix, 
 genpop, or genalex formatted file.</p></td>
     </tr>
     <tr>
@@ -222,21 +222,21 @@ and <code>sample = 1000</code> will give you p = 0.000999001).</p></td>
     <tr>
       <th>method</th>
       <td><p>an integer from 1 to 4 indicating the method of sampling 
-desired. see <code><a href='https://rdrr.io/pkg/poppr/man/shufflepop.html'>shufflepop</a></code> for details.</p></td>
+desired. see <code><a href='shufflepop.html'>shufflepop</a></code> for details.</p></td>
     </tr>
     <tr>
       <th>missing</th>
       <td><p>how should missing data be treated? <code>"zero"</code> and 
 <code>"mean"</code> will set the missing values to those documented in 
 <code>tab</code>. <code>"loci"</code> and <code>"geno"</code> will remove any loci or
-genotypes with missing data, respectively (see <code><a href='https://rdrr.io/pkg/poppr/man/missingno.html'>missingno</a></code> for
+genotypes with missing data, respectively (see <code><a href='missingno.html'>missingno</a></code> for
 more information.</p></td>
     </tr>
     <tr>
       <th>cutoff</th>
       <td><p><code>numeric</code> a number from 0 to 1 indicating the percent 
 missing data allowed for analysis. This is to be used in conjunction with 
-the flag <code>missing</code> (see <code><a href='https://rdrr.io/pkg/poppr/man/missingno.html'>missingno</a></code> for details)</p></td>
+the flag <code>missing</code> (see <code><a href='missingno.html'>missingno</a></code> for details)</p></td>
     </tr>
     <tr>
       <th>quiet</th>
@@ -247,7 +247,7 @@ population analyzed.</p></td>
       <th>clonecorrect</th>
       <td><p>default <code>FALSE</code>. must be used with the <code>strata</code>
 parameter, or the user will potentially get undesired results. see
-<code><a href='https://rdrr.io/pkg/poppr/man/clonecorrect.html'>clonecorrect</a></code> for details.</p></td>
+<code><a href='clonecorrect.html'>clonecorrect</a></code> for details.</p></td>
     </tr>
     <tr>
       <th>strata</th>
@@ -260,7 +260,7 @@ The hierarchies should be present in the <code>strata</code> slot. See
       <td><p>an <code>integer</code>. This indicates which strata you wish to keep 
 after clone correcting your data sets. To combine strata, just set keep 
 from 1 to the number of straifications set in strata. see 
-<code><a href='https://rdrr.io/pkg/poppr/man/clonecorrect.html'>clonecorrect</a></code> for details.</p></td>
+<code><a href='clonecorrect.html'>clonecorrect</a></code> for details.</p></td>
     </tr>
     <tr>
       <th>plot</th>
@@ -290,7 +290,7 @@ describing the resulting table columns will be printed. Defaults to
     </tr>
     <tr>
       <th>...</th>
-      <td><p>arguments to be passed on to <code><a href='https://rdrr.io/pkg/poppr/man/diversity_stats.html'>diversity_stats</a></code></p></td>
+      <td><p>arguments to be passed on to <code><a href='diversity_stats.html'>diversity_stats</a></code></p></td>
     </tr>
     </table>
 
@@ -301,7 +301,7 @@ describing the resulting table columns will be printed. Defaults to
   <dt>N</dt><dd><p>An integer vector indicating the number of individuals/isolates in
   the specified population.</p></dd>
   <dt>MLG</dt><dd><p>An integer vector indicating the number of multilocus genotypes 
-  found in the specified population, (see: <code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg</a></code>)</p></dd>
+  found in the specified population, (see: <code><a href='mlg.html'>mlg</a></code>)</p></dd>
   <dt>eMLG</dt><dd><p>The expected number of MLG at the lowest common sample size
   (set by the parameter <code>minsamp</code>).</p></dd>
   <dt>SE</dt><dd><p>The standard error for the rarefaction analysis</p></dd>
@@ -311,12 +311,12 @@ describing the resulting table columns will be printed. Defaults to
   <dt>E.5</dt><dd><p>Evenness</p></dd> 
   <dt>Hexp</dt><dd><p>Nei's gene diversity (expected heterozygosity)</p></dd>
   <dt>Ia</dt><dd><p>A numeric vector giving the value of the Index of Association for
-  each population factor, (see <code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>ia</a></code>).</p></dd>
+  each population factor, (see <code><a href='ia.html'>ia</a></code>).</p></dd>
   <dt>p.Ia</dt><dd><p>A numeric vector indicating the p-value for Ia from the number
   of reshufflings indicated in <code>sample</code>. Lowest value is 1/n where n is
   the number of observed values.</p></dd>
   <dt>rbarD</dt><dd><p>A numeric vector giving the value of the Standardized Index of
-  Association for each population factor, (see <code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>ia</a></code>).</p></dd>
+  Association for each population factor, (see <code><a href='ia.html'>ia</a></code>).</p></dd>
   <dt>p.rD</dt><dd><p>A numeric vector indicating the p-value for rbarD from the
   number of reshuffles indicated in <code>sample</code>. Lowest value is 1/n where
   n is the number of observed values.</p></dd>
@@ -334,11 +334,11 @@ describing the resulting table columns will be printed. Defaults to
   index of association. None of the other diversity statistics (H, G, lambda,
   E.5) are tested with this sampling due to the differing data types. To
   obtain confidence intervals for these statistics, please see 
-  <code><a href='https://rdrr.io/pkg/poppr/man/diversity_ci.html'>diversity_ci</a></code>.</p><p></p><h3>rarefaction</h3>
+  <code><a href='diversity_ci.html'>diversity_ci</a></code>.</p><p></p><h3>rarefaction</h3>
 <p>Rarefaction analysis is performed on the number of
   multilocus genotypes because it is relatively easy to estimate (Grünwald et
   al., 2003). To obtain rarefied estimates of diversity, it is possible to
-  use <code><a href='https://rdrr.io/pkg/poppr/man/diversity_ci.html'>diversity_ci</a></code> with the argument <code>rarefy = TRUE</code></p><p></p><h3>graphic</h3>
+  use <code><a href='diversity_ci.html'>diversity_ci</a></code> with the argument <code>rarefy = TRUE</code></p><p></p><h3>graphic</h3>
 <p>This function outputs a <span class="pkg">ggplot2</span> graphic of
   histograms. These can be manipulated to be visualized in another manner by
   retrieving the plot with the <code><a href='https://ggplot2.tidyverse.org/reference/last_plot.html'>last_plot</a></code> command from
@@ -403,20 +403,17 @@ describing the resulting table columns will be printed. Defaults to
   prediction in samples. Genetics, 118(4):705-11, 1988.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/poppr/man/clonecorrect.html'>clonecorrect</a></code>, 
-  <code><a href='https://rdrr.io/pkg/poppr/man/poppr.all.html'>poppr.all</a></code>, 
-  <code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>ia</a></code>, 
-  <code><a href='https://rdrr.io/pkg/poppr/man/missingno.html'>missingno</a></code>, 
-  <code><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg</a></code>, 
-  <code><a href='https://rdrr.io/pkg/poppr/man/diversity_stats.html'>diversity_stats</a></code>,
-  <code><a href='https://rdrr.io/pkg/poppr/man/diversity_ci.html'>diversity_ci</a></code></p></div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Zhian N. Kamvar</p>
+    <div class='dont-index'><p><code><a href='clonecorrect.html'>clonecorrect</a></code>, 
+  <code><a href='poppr.all.html'>poppr.all</a></code>, 
+  <code><a href='ia.html'>ia</a></code>, 
+  <code><a href='missingno.html'>missingno</a></code>, 
+  <code><a href='mlg.html'>mlg</a></code>, 
+  <code><a href='diversity_stats.html'>diversity_stats</a></code>,
+  <code><a href='diversity_ci.html'>diversity_ci</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>nancycats</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr</a></span>(<span class='kw'>nancycats</span>)</div><div class='output co'>#&gt;      Pop   N MLG eMLG       SE    H   G lambda E.5  Hexp      Ia   rbarD
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>nancycats</span>)
+<span class='fu'>poppr</span>(<span class='no'>nancycats</span>)</div><div class='output co'>#&gt;      Pop   N MLG eMLG       SE    H   G lambda E.5  Hexp      Ia   rbarD
 #&gt; 1    P01  10  10   10 0.00e+00 2.30  10  0.900   1 0.649  0.1656  0.0211
 #&gt; 2    P02  22  22   10 0.00e+00 3.09  22  0.955   1 0.701  0.1818  0.0230
 #&gt; 3    P03  12  12   10 0.00e+00 2.48  12  0.917   1 0.719  0.3546  0.0452
@@ -456,7 +453,7 @@ describing the resulting table columns will be printed. Defaults to
 #&gt; 18 nancycats</div><div class='input'>
 <span class='co'># \dontrun{</span>
 <span class='co'># Sampling</span>
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr</a></span>(<span class='kw'>nancycats</span>, sample = <span class='fl'>999</span>, total = <span class='fl'>FALSE</span>, plot = <span class='fl'>TRUE</span>)</div><div class='img'><img src='poppr-1.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;    Pop  N MLG eMLG       SE    H  G lambda E.5  Hexp      Ia  p.Ia   rbarD
+<span class='fu'>poppr</span>(<span class='no'>nancycats</span>, <span class='kw'>sample</span> <span class='kw'>=</span> <span class='fl'>999</span>, <span class='kw'>total</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='poppr-1.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;    Pop  N MLG eMLG       SE    H  G lambda E.5  Hexp      Ia  p.Ia   rbarD
 #&gt; 1  P01 10  10   10 0.00e+00 2.30 10  0.900   1 0.649  0.1656 0.229  0.0211
 #&gt; 2  P02 22  22   10 0.00e+00 3.09 22  0.955   1 0.701  0.1818 0.074  0.0230
 #&gt; 3  P03 12  12   10 0.00e+00 2.48 12  0.917   1 0.719  0.3546 0.042  0.0452
@@ -493,11 +490,11 @@ describing the resulting table columns will be printed. Defaults to
 #&gt; 16 0.112 nancycats
 #&gt; 17 0.667 nancycats</div><div class='input'>
 <span class='co'># Customizing the plot</span>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'><a href='http://ggplot2.tidyverse.org'>"ggplot2"</a></span>)
-<span class='kw'>p</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/last_plot.html'>last_plot</a></span>()
-<span class='kw'>p</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span>(<span class='op'>~</span><span class='kw'>population</span>, scales = <span class='st'>"free_y"</span>, ncol = <span class='fl'>1</span>)</div><div class='img'><img src='poppr-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'>"ggplot2"</span>)
+<span class='no'>p</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/last_plot.html'>last_plot</a></span>()
+<span class='no'>p</span> + <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span>(~<span class='no'>population</span>, <span class='kw'>scales</span> <span class='kw'>=</span> <span class='st'>"free_y"</span>, <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='poppr-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Turning off diversity statistics (see get_stats)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr</a></span>(<span class='kw'>nancycats</span>, total=<span class='fl'>FALSE</span>, H = <span class='fl'>FALSE</span>, G = <span class='fl'>FALSE</span>, lambda = <span class='fl'>FALSE</span>, E5 = <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt;    Pop  N MLG eMLG       SE  Hexp      Ia   rbarD      File
+<span class='fu'>poppr</span>(<span class='no'>nancycats</span>, <span class='kw'>total</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>H</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>G</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>lambda</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>E5</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt;    Pop  N MLG eMLG       SE  Hexp      Ia   rbarD      File
 #&gt; 1  P01 10  10   10 0.00e+00 0.649  0.1656  0.0211 nancycats
 #&gt; 2  P02 22  22   10 0.00e+00 0.701  0.1818  0.0230 nancycats
 #&gt; 3  P03 12  12   10 0.00e+00 0.719  0.3546  0.0452 nancycats
@@ -521,19 +518,19 @@ describing the resulting table columns will be printed. Defaults to
 <span class='co'># was originally included in the program multilocus. It was finally figured</span>
 <span class='co'># to be an unbiased Simpson's diversity metric (Lande, 1996; Good, 1953).</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>Aeut</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Aeut</span>)
 
-<span class='kw'>uSimp</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>lambda</span> <span class='op'>&lt;-</span> <span class='kw'>vegan</span>::<span class='fu'><a href='https://rdrr.io/pkg/vegan/man/diversity.html'>diversity</a></span>(<span class='kw'>x</span>, <span class='st'>"simpson"</span>)
-  <span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/drop.html'>drop</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='kw'>x</span>))
-  <span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span>(<span class='kw'>x</span>)) <span class='op'>&gt;</span> <span class='fl'>1</span>){
-    <span class='kw'>N</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='kw'>x</span>)
-  } <span class='co'>else</span> {
-    <span class='kw'>N</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>x</span>)
+<span class='no'>uSimp</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>){
+  <span class='no'>lambda</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>vegan</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/vegan/man/diversity.html'>diversity</a></span>(<span class='no'>x</span>, <span class='st'>"simpson"</span>)
+  <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/drop.html'>drop</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='no'>x</span>))
+  <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span>(<span class='no'>x</span>)) <span class='kw'>&gt;</span> <span class='fl'>1</span>){
+    <span class='no'>N</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='no'>x</span>)
+  } <span class='kw'>else</span> {
+    <span class='no'>N</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>x</span>)
   }
-  <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>((<span class='kw'>N</span><span class='op'>/</span>(<span class='kw'>N</span><span class='op'>-</span><span class='fl'>1</span>))<span class='op'>*</span><span class='kw'>lambda</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>((<span class='no'>N</span>/(<span class='no'>N</span>-<span class='fl'>1</span>))*<span class='no'>lambda</span>)
 }
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr</a></span>(<span class='kw'>Aeut</span>, uSimp = <span class='kw'>uSimp</span>)</div><div class='output co'>#&gt;          Pop   N MLG eMLG   SE    H    G lambda   E.5 uSimp  Hexp    Ia  rbarD
+<span class='fu'>poppr</span>(<span class='no'>Aeut</span>, <span class='kw'>uSimp</span> <span class='kw'>=</span> <span class='no'>uSimp</span>)</div><div class='output co'>#&gt;          Pop   N MLG eMLG   SE    H    G lambda   E.5 uSimp  Hexp    Ia  rbarD
 #&gt; 1     Athena  97  70 66.0 1.25 4.06 42.2  0.976 0.721 0.986 0.170  2.91 0.0724
 #&gt; 2 Mt. Vernon  90  50 50.0 0.00 3.67 28.7  0.965 0.726 0.976 0.158 13.30 0.2816
 #&gt; 3      Total 187 119 68.5 2.99 4.56 69.0  0.986 0.720 0.991 0.365 14.37 0.2706
@@ -545,14 +542,15 @@ describing the resulting table columns will be printed. Defaults to
 <span class='co'># Demonstration with viral data</span>
 <span class='co'># Note: this is a larger data set that could take a couple of minutes to run</span>
 <span class='co'># on slower computers. </span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>H3N2</span>)
-<span class='fu'>strata</span>(<span class='kw'>H3N2</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='fu'>other</span>(<span class='kw'>H3N2</span>)<span class='op'>$</span><span class='kw'>x</span>)
-<span class='fu'>setPop</span>(<span class='kw'>H3N2</span>) <span class='op'>&lt;-</span> <span class='op'>~</span><span class='kw'>country</span>
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/poppr.html'>poppr</a></span>(<span class='kw'>H3N2</span>, total = <span class='fl'>FALSE</span>, sublist=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Austria"</span>, <span class='st'>"China"</span>, <span class='st'>"USA"</span>), 
-				clonecorrect = TRUE, strata = ~country/year<span class='fl'>TRUE</span><span class='op'>~</span><span class='kw'>country</span><span class='op'>/</span><span class='kw'>year</span></div><div class='output co'>#&gt;       Pop   N MLG eMLG    SE    H     G lambda   E.5   Hexp    Ia  rbarD File
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>H3N2</span>)
+<span class='fu'>strata</span>(<span class='no'>H3N2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='fu'>other</span>(<span class='no'>H3N2</span>)$<span class='no'>x</span>)
+<span class='fu'>setPop</span>(<span class='no'>H3N2</span>) <span class='kw'>&lt;-</span> ~<span class='no'>country</span>
+<span class='fu'>poppr</span>(<span class='no'>H3N2</span>, <span class='kw'>total</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>sublist</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Austria"</span>, <span class='st'>"China"</span>, <span class='st'>"USA"</span>),
+                                <span class='kw'>clonecorrect</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>strata</span> <span class='kw'>=</span> ~<span class='no'>country</span>/<span class='no'>year</span>)</div><div class='output co'>#&gt;       Pop   N MLG eMLG    SE    H     G lambda   E.5   Hexp    Ia  rbarD File
 #&gt; 1     USA 275 254 42.5 0.687 5.51 238.6  0.996 0.964 0.1341 10.75 0.1167 H3N2
 #&gt; 2   China  82  79 42.2 0.757 4.36  76.4  0.987 0.980 0.0929  2.54 0.0371 H3N2
-#&gt; 3 Austria  43  41 41.0 0.000 3.70  39.3  0.975 0.975 0.1140 13.02 0.2226 H3N2</div><div class='input'><span class='co'># }</span></div></pre>
+#&gt; 3 Austria  43  41 41.0 0.000 3.70  39.3  0.975 0.975 0.1140 13.02 0.2226 H3N2</div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -568,7 +566,7 @@ describing the resulting table columns will be printed. Defaults to
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

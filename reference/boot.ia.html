@@ -147,7 +147,7 @@ set multiple times to create a distribution, showing the variation of the
 index due to repeat observations.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/boot.ia.html'>boot.ia</a></span>(<span class='kw'>gid</span>, how = <span class='st'>"partial"</span>, reps = <span class='fl'>999</span>, quiet = <span class='fl'>FALSE</span>, <span class='kw'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>boot.ia</span>(<span class='no'>gid</span>, <span class='kw'>how</span> <span class='kw'>=</span> <span class='st'>"partial"</span>, <span class='kw'>reps</span> <span class='kw'>=</span> <span class='fl'>999</span>, <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -164,7 +164,7 @@ genotypes until the total number of individuals has been reached. Using
 <code>how = "full"</code> will randomly sample with replacement from the data as it
 is. Using <code>how = "psex"</code> will sample from the full data set after first
 weighting the samples via the probability of encountering the nth occurence
-of a particular multilocus genotype. See <code><a href='https://rdrr.io/pkg/poppr/man/psex.html'>psex()</a></code> for details.</p></td>
+of a particular multilocus genotype. See <code><a href='psex.html'>psex()</a></code> for details.</p></td>
     </tr>
     <tr>
       <th>reps</th>
@@ -178,7 +178,7 @@ Defaults to 999.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>options passed on to <code><a href='https://rdrr.io/pkg/poppr/man/psex.html'>psex()</a></code></p></td>
+      <td><p>options passed on to <code><a href='psex.html'>psex()</a></code></p></td>
     </tr>
     </table>
 
@@ -192,13 +192,13 @@ association in columns. Number of rows represents the number of reps.</p>
 what you are doing.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>ia()</a></code>,
-<code><a href='https://rdrr.io/pkg/poppr/man/ia.html'>pair.ia()</a></code>,
-<code><a href='https://rdrr.io/pkg/poppr/man/psex.html'>psex()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='ia.html'>ia()</a></code>,
+<code><a href='ia.html'>pair.ia()</a></code>,
+<code><a href='psex.html'>psex()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>Pinf</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/boot.ia.html'>boot.ia</a></span>(<span class='kw'>Pinf</span>, reps = <span class='fl'>99</span>)</div><div class='output co'>#&gt;           Ia      rbarD
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Pinf</span>)
+<span class='fu'>boot.ia</span>(<span class='no'>Pinf</span>, <span class='kw'>reps</span> <span class='kw'>=</span> <span class='fl'>99</span>)</div><div class='output co'>#&gt;           Ia      rbarD
 #&gt; 1  0.6002580 0.06570511
 #&gt; 2  0.4958295 0.05426157
 #&gt; 3  0.5040736 0.05519292
@@ -313,7 +313,7 @@ what you are doing.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

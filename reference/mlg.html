@@ -143,46 +143,46 @@
     <p>Create counts, vectors, and matrices of multilocus genotypes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg</a></span>(<span class='kw'>gid</span>, quiet = <span class='fl'>FALSE</span>)
+    <pre class="usage"><span class='fu'>mlg</span>(<span class='no'>gid</span>, <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
 
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(
-  <span class='kw'>gid</span>,
-  strata = <span class='kw'>NULL</span>,
-  sublist = <span class='st'>"ALL"</span>,
-  exclude = <span class='kw'>NULL</span>,
-  blacklist = <span class='kw'>NULL</span>,
-  mlgsub = <span class='kw'>NULL</span>,
-  bar = <span class='fl'>TRUE</span>,
-  plot = <span class='fl'>TRUE</span>,
-  total = <span class='fl'>FALSE</span>,
-  color = <span class='fl'>FALSE</span>,
-  background = <span class='fl'>FALSE</span>,
-  quiet = <span class='fl'>FALSE</span>
+<span class='fu'>mlg.table</span>(
+  <span class='no'>gid</span>,
+  <span class='kw'>strata</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sublist</span> <span class='kw'>=</span> <span class='st'>"ALL"</span>,
+  <span class='kw'>exclude</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>blacklist</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>mlgsub</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>bar</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>total</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>color</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>background</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )
 
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.vector</a></span>(<span class='kw'>gid</span>, reset = <span class='fl'>FALSE</span>)
+<span class='fu'>mlg.vector</span>(<span class='no'>gid</span>, <span class='kw'>reset</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
 
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.crosspop</a></span>(
-  <span class='kw'>gid</span>,
-  strata = <span class='kw'>NULL</span>,
-  sublist = <span class='st'>"ALL"</span>,
-  exclude = <span class='kw'>NULL</span>,
-  blacklist = <span class='kw'>NULL</span>,
-  mlgsub = <span class='kw'>NULL</span>,
-  indexreturn = <span class='fl'>FALSE</span>,
-  df = <span class='fl'>FALSE</span>,
-  quiet = <span class='fl'>FALSE</span>
+<span class='fu'>mlg.crosspop</span>(
+  <span class='no'>gid</span>,
+  <span class='kw'>strata</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>sublist</span> <span class='kw'>=</span> <span class='st'>"ALL"</span>,
+  <span class='kw'>exclude</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>blacklist</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>mlgsub</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>indexreturn</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
 )
 
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.id</a></span>(<span class='kw'>gid</span>)</pre>
+<span class='fu'>mlg.id</span>(<span class='no'>gid</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>gid</th>
-      <td><p>a <code>genind</code>, <code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code>,
-<code>genlight</code>, or <code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>snpclone</a></code> object.</p></td>
+      <td><p>a <code>genind</code>, <code><a href='genclone-class.html'>genclone</a></code>,
+<code>genlight</code>, or <code><a href='genclone-class.html'>snpclone</a></code> object.</p></td>
     </tr>
     <tr>
       <th>quiet</th>
@@ -255,7 +255,7 @@ to index the columns of <code>mlg.table</code>.</p></td>
       <th>df</th>
       <td><p><code>logical</code> If <code>TRUE</code>, return a data frame containing the 
 counts of the MLGs and what countries they are in. Useful for making graphs
-with <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></code>.</p></td>
+with <code>ggplot</code>.</p></td>
     </tr>
     </table>
 
@@ -267,7 +267,7 @@ with <code><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot<
 genotypes observed.</p><p></p><h3>mlg.table</h3>
 <p>a matrix with columns
 indicating unique multilocus genotypes and rows indicating populations. 
-This table can be used with the funciton <code><a href='https://rdrr.io/pkg/poppr/man/diversity_stats.html'>diversity_stats</a></code> to calculate
+This table can be used with the funciton <code><a href='diversity_stats.html'>diversity_stats</a></code> to calculate
 the Shannon-Weaver index (H), Stoddart and Taylor's 
 index (aka inverse Simpson's index; G), Simpson's index (lambda), and evenness (E5).</p> 
 <h3>mlg.vector</h3>
@@ -291,18 +291,18 @@ individual names per MLG.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Multilocus genotypes are the unique combination of alleles across
-  all loci. For details of how these are calculated see <code>vignette("mlg",
-  package = "poppr")</code>. In short, for genind and genclone objects, they are
+  all loci. For details of how these are calculated see <code><a href='../articles/mlg.html'>vignette("mlg",
+  package = "poppr")</a></code>. In short, for genind and genclone objects, they are
   calculated by using a rank function on strings of alleles, which is
   sensitive to missing data. For genlight and snpclone objects, they are
-  calculated with distance methods via <code><a href='https://rdrr.io/pkg/poppr/man/bitwise.dist.html'>bitwise.dist</a></code> and
-  <code><a href='https://rdrr.io/pkg/poppr/man/mlg.filter.html'>mlg.filter</a></code>, which means that these are insensitive to missing
+  calculated with distance methods via <code><a href='bitwise.dist.html'>bitwise.dist</a></code> and
+  <code><a href='mlg.filter.html'>mlg.filter</a></code>, which means that these are insensitive to missing
   data. Three different types of MLGs can be defined in <span class="pkg">poppr</span>:</p><ul>
 <li><p>original - the default definition of multilocus genotypes as
   detailed above</p></li>
 <li><p>contracted - these are multilocus genotypes
-  collapsed into multilocus lineages (<code><a href='https://rdrr.io/pkg/poppr/man/mll-method.html'>mll</a></code>) with genetic
-  distance via <code><a href='https://rdrr.io/pkg/poppr/man/mlg.filter.html'>mlg.filter</a></code></p></li>
+  collapsed into multilocus lineages (<code><a href='mll-method.html'>mll</a></code>) with genetic
+  distance via <code><a href='mlg.filter.html'>mlg.filter</a></code></p></li>
 <li><p>custom - user-defined
   multilocus genotypes. These are useful for information such as mycelial
   compatibility groups</p></li>
@@ -314,33 +314,30 @@ individual names per MLG.</p>
 the <code>vegan</code> package.</p>
 <p>mlg.vector will recalculate the mlg vector for
   <code>genind</code> objects and will return the contents of the mlg
-  slot in <code><a href='https://rdrr.io/pkg/poppr/man/genclone-class.html'>genclone</a></code> objects. This means that MLGs will be
+  slot in <code><a href='genclone-class.html'>genclone</a></code> objects. This means that MLGs will be
   different for subsetted <code>genind</code> objects.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/vegan/man/diversity.html'>diversity</a></code> 
- <code><a href='https://rdrr.io/pkg/poppr/man/diversity_stats.html'>diversity_stats</a></code>
- <code><a href='https://rdrr.io/pkg/poppr/man/popsub.html'>popsub</a></code>
- <code><a href='https://rdrr.io/pkg/poppr/man/mll-method.html'>mll</a></code>
- <code><a href='https://rdrr.io/pkg/poppr/man/mlg.filter.html'>mlg.filter</a></code>
- <code><a href='https://rdrr.io/pkg/poppr/man/mll.custom.html'>mll.custom</a></code></p></div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Zhian N. Kamvar</p>
+ <code><a href='diversity_stats.html'>diversity_stats</a></code>
+ <code><a href='popsub.html'>popsub</a></code>
+ <code><a href='mll-method.html'>mll</a></code>
+ <code><a href='mlg.filter.html'>mlg.filter</a></code>
+ <code><a href='mll.custom.html'>mll.custom</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='co'># Load the data set</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>Aeut</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Aeut</span>)
 
 <span class='co'># Investigate the number of multilocus genotypes.</span>
-<span class='kw'>amlg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg</a></span>(<span class='kw'>Aeut</span>)</div><div class='output co'>#&gt; #############################
+<span class='no'>amlg</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg</span>(<span class='no'>Aeut</span>)</div><div class='output co'>#&gt; #############################
 #&gt; # Number of Individuals:  187 
 #&gt; # Number of MLG:  119 
-#&gt; #############################</div><div class='input'><span class='kw'>amlg</span> <span class='co'># 119</span></div><div class='output co'>#&gt; [1] 119</div><div class='input'>
+#&gt; #############################</div><div class='input'><span class='no'>amlg</span> <span class='co'># 119</span></div><div class='output co'>#&gt; [1] 119</div><div class='input'>
 <span class='co'># show the multilocus genotype vector </span>
-<span class='kw'>avec</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.vector</a></span>(<span class='kw'>Aeut</span>)
-<span class='kw'>avec</span> </div><div class='output co'>#&gt;   [1]  63  53  17  16  26  42   8  17  16  93  94 112  44 118  51 113  45 110
+<span class='no'>avec</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.vector</span>(<span class='no'>Aeut</span>)
+<span class='no'>avec</span></div><div class='output co'>#&gt;   [1]  63  53  17  16  26  42   8  17  16  93  94 112  44 118  51 113  45 110
 #&gt;  [19] 114   7 111  20  20  20  20  30  20  20  20  20  20  28  66  66  68  66
 #&gt;  [37]  67  23  66  65  66  57  22 119  36  35  36  35  62  35  34  52  33  63
 #&gt;  [55]   1  39  59  61  23  21  47  48  25  50  32  49  60   9  10  60  27  13
@@ -352,7 +349,7 @@ the <code>vegan</code> package.</p>
 #&gt; [163]  90  80  99  88  80  77  78  77  87  80  91 101  79 102  78 103 103  95
 #&gt; [181]  97  81  80  97  97  97 101</div><div class='input'>
 <span class='co'># Get a table</span>
-<span class='kw'>atab</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>Aeut</span>, color = <span class='fl'>TRUE</span>)</div><div class='img'><img src='mlg-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>atab</span></div><div class='output co'>#&gt;            MLG.1 MLG.2 MLG.3 MLG.4 MLG.5 MLG.6 MLG.7 MLG.8 MLG.9 MLG.10 MLG.11
+<span class='no'>atab</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.table</span>(<span class='no'>Aeut</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='mlg-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='no'>atab</span></div><div class='output co'>#&gt;            MLG.1 MLG.2 MLG.3 MLG.4 MLG.5 MLG.6 MLG.7 MLG.8 MLG.9 MLG.10 MLG.11
 #&gt; Athena         1     0     0     0     0     0     1     1     1      1      1
 #&gt; Mt. Vernon     0     2     1     1     1     1     0     0     0      0      0
 #&gt;            MLG.12 MLG.13 MLG.14 MLG.15 MLG.16 MLG.17 MLG.18 MLG.19 MLG.20
@@ -395,10 +392,10 @@ the <code>vegan</code> package.</p>
 #&gt; Athena           1       1
 #&gt; Mt. Vernon       0       0</div><div class='input'>
 <span class='co'># See where multilocus genotypes cross populations</span>
-<span class='kw'>acrs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.crosspop</a></span>(<span class='kw'>Aeut</span>) <span class='co'># MLG.59: (2 inds) Athena Mt. Vernon</span></div><div class='output co'>#&gt; MLG.59: (2 inds) Athena Mt. Vernon</div><div class='input'>
+<span class='no'>acrs</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.crosspop</span>(<span class='no'>Aeut</span>) <span class='co'># MLG.59: (2 inds) Athena Mt. Vernon</span></div><div class='output co'>#&gt; MLG.59: (2 inds) Athena Mt. Vernon</div><div class='input'>
 <span class='co'># See which individuals belong to each MLG</span>
-<span class='kw'>aid</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.id</a></span>(<span class='kw'>Aeut</span>)
-<span class='kw'>aid</span>[<span class='st'>"59"</span>] <span class='co'># individuals 159 and 57</span></div><div class='output co'>#&gt; $`59`
+<span class='no'>aid</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.id</span>(<span class='no'>Aeut</span>)
+<span class='no'>aid</span>[<span class='st'>"59"</span>] <span class='co'># individuals 159 and 57</span></div><div class='output co'>#&gt; $`59`
 #&gt; [1] "057" "159"
 #&gt; </div><div class='input'>
 <span class='co'># \dontrun{</span>
@@ -406,7 +403,7 @@ the <code>vegan</code> package.</p>
 <span class='co'># For the mlg.table, you can also choose to display the number of MLGs across</span>
 <span class='co'># populations in the background</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>Aeut</span>, background = <span class='fl'>TRUE</span>)</div><div class='img'><img src='mlg-2.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;            MLG.1 MLG.2 MLG.3 MLG.4 MLG.5 MLG.6 MLG.7 MLG.8 MLG.9 MLG.10 MLG.11
+<span class='fu'>mlg.table</span>(<span class='no'>Aeut</span>, <span class='kw'>background</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='mlg-2.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;            MLG.1 MLG.2 MLG.3 MLG.4 MLG.5 MLG.6 MLG.7 MLG.8 MLG.9 MLG.10 MLG.11
 #&gt; Athena         1     0     0     0     0     0     1     1     1      1      1
 #&gt; Mt. Vernon     0     2     1     1     1     1     0     0     0      0      0
 #&gt;            MLG.12 MLG.13 MLG.14 MLG.15 MLG.16 MLG.17 MLG.18 MLG.19 MLG.20
@@ -447,7 +444,7 @@ the <code>vegan</code> package.</p>
 #&gt; Mt. Vernon       0       0       0       0       0       1       1       1
 #&gt;            MLG.118 MLG.119
 #&gt; Athena           1       1
-#&gt; Mt. Vernon       0       0</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>Aeut</span>, background = <span class='fl'>TRUE</span>, color = <span class='fl'>TRUE</span>)</div><div class='img'><img src='mlg-3.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;            MLG.1 MLG.2 MLG.3 MLG.4 MLG.5 MLG.6 MLG.7 MLG.8 MLG.9 MLG.10 MLG.11
+#&gt; Mt. Vernon       0       0</div><div class='input'><span class='fu'>mlg.table</span>(<span class='no'>Aeut</span>, <span class='kw'>background</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='mlg-3.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;            MLG.1 MLG.2 MLG.3 MLG.4 MLG.5 MLG.6 MLG.7 MLG.8 MLG.9 MLG.10 MLG.11
 #&gt; Athena         1     0     0     0     0     0     1     1     1      1      1
 #&gt; Mt. Vernon     0     2     1     1     1     1     0     0     0      0      0
 #&gt;            MLG.12 MLG.13 MLG.14 MLG.15 MLG.16 MLG.17 MLG.18 MLG.19 MLG.20
@@ -490,30 +487,30 @@ the <code>vegan</code> package.</p>
 #&gt; Athena           1       1
 #&gt; Mt. Vernon       0       0</div><div class='input'>
 <span class='co'># A simple example. 10 individuals, 5 genotypes.</span>
-<span class='kw'>mat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(ncol=<span class='fl'>5</span>, <span class='fl'>25</span><span class='op'>:</span><span class='fl'>1</span>)
-<span class='kw'>mat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='kw'>mat1</span>, <span class='kw'>mat1</span>)
-<span class='kw'>mat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(nrow=<span class='fl'>10</span>, ncol=<span class='fl'>5</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>mat1</span>,<span class='kw'>mat1</span>,sep=<span class='st'>"/"</span>))
-<span class='kw'>mat.gid</span> <span class='op'>&lt;-</span> <span class='fu'>df2genind</span>(<span class='kw'>mat</span>, sep=<span class='st'>"/"</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg</a></span>(<span class='kw'>mat.gid</span>)</div><div class='output co'>#&gt; #############################
+<span class='no'>mat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>5</span>, <span class='fl'>25</span>:<span class='fl'>1</span>)
+<span class='no'>mat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='no'>mat1</span>, <span class='no'>mat1</span>)
+<span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='kw'>nrow</span><span class='kw'>=</span><span class='fl'>10</span>, <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>5</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='no'>mat1</span>,<span class='no'>mat1</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>"/"</span>))
+<span class='no'>mat.gid</span> <span class='kw'>&lt;-</span> <span class='fu'>df2genind</span>(<span class='no'>mat</span>, <span class='kw'>sep</span><span class='kw'>=</span><span class='st'>"/"</span>)
+<span class='fu'>mlg</span>(<span class='no'>mat.gid</span>)</div><div class='output co'>#&gt; #############################
 #&gt; # Number of Individuals:  10 
 #&gt; # Number of MLG:  5 
-#&gt; #############################</div><div class='output co'>#&gt; [1] 5</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.vector</a></span>(<span class='kw'>mat.gid</span>)</div><div class='output co'>#&gt;  [1] 5 4 3 2 1 5 4 3 2 1</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>mat.gid</span>)</div><div class='img'><img src='mlg-4.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;       MLG.1 MLG.2 MLG.3 MLG.4 MLG.5
+#&gt; #############################</div><div class='output co'>#&gt; [1] 5</div><div class='input'><span class='fu'>mlg.vector</span>(<span class='no'>mat.gid</span>)</div><div class='output co'>#&gt;  [1] 5 4 3 2 1 5 4 3 2 1</div><div class='input'><span class='fu'>mlg.table</span>(<span class='no'>mat.gid</span>)</div><div class='img'><img src='mlg-4.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;       MLG.1 MLG.2 MLG.3 MLG.4 MLG.5
 #&gt; Total     2     2     2     2     2</div><div class='input'>
 <span class='co'># Now for a more complicated example.</span>
 <span class='co'># Data set of 1903 samples of the H3N2 flu virus genotyped at 125 SNP loci.</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>H3N2</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg</a></span>(<span class='kw'>H3N2</span>, quiet = <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; #############################
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>H3N2</span>)
+<span class='fu'>mlg</span>(<span class='no'>H3N2</span>, <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; #############################
 #&gt; # Number of Individuals:  1903 
 #&gt; # Number of MLG:  752 
 #&gt; #############################</div><div class='output co'>#&gt; [1] 752</div><div class='input'>
-<span class='kw'>H.vec</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.vector</a></span>(<span class='kw'>H3N2</span>)
+<span class='no'>H.vec</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.vector</span>(<span class='no'>H3N2</span>)
 
 <span class='co'># Changing the population vector to indicate the years of each epidemic.</span>
-<span class='fu'>pop</span>(<span class='kw'>H3N2</span>) <span class='op'>&lt;-</span> <span class='fu'>other</span>(<span class='kw'>H3N2</span>)<span class='op'>$</span><span class='kw'>x</span><span class='op'>$</span><span class='kw'>country</span>
-<span class='kw'>H.tab</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>H3N2</span>, plot = <span class='fl'>FALSE</span>, total = <span class='fl'>TRUE</span>)
+<span class='fu'>pop</span>(<span class='no'>H3N2</span>) <span class='kw'>&lt;-</span> <span class='fu'>other</span>(<span class='no'>H3N2</span>)$<span class='no'>x</span>$<span class='no'>country</span>
+<span class='no'>H.tab</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.table</span>(<span class='no'>H3N2</span>, <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>total</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='co'># Show which genotypes exist accross populations in the entire dataset.</span>
-<span class='kw'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.crosspop</a></span>(<span class='kw'>H3N2</span>, quiet = <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; MLG.3: (12 inds) USA Denmark
+<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.crosspop</span>(<span class='no'>H3N2</span>, <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; MLG.3: (12 inds) USA Denmark
 #&gt; MLG.9: (16 inds) Japan USA Finland Denmark
 #&gt; MLG.31: (9 inds) Japan Canada
 #&gt; MLG.75: (23 inds) Japan USA Finland Norway Denmark Austria Russia Ireland
@@ -590,7 +587,7 @@ the <code>vegan</code> package.</p>
 #&gt; MLG.621: (2 inds) Austria Italy</div><div class='input'>
 <span class='co'># Let's say we want to visualize the multilocus genotype distribution for the</span>
 <span class='co'># USA and Russia</span>
-<span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>H3N2</span>, sublist = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"USA"</span>, <span class='st'>"Russia"</span>), bar=<span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: In poppr version 2.0, bar is deprecated. Please use plot.</span></div><div class='img'><img src='mlg-5.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;        MLG.2 MLG.3 MLG.4 MLG.5 MLG.9 MLG.11 MLG.12 MLG.13 MLG.17 MLG.19 MLG.20
+<span class='fu'>mlg.table</span>(<span class='no'>H3N2</span>, <span class='kw'>sublist</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"USA"</span>, <span class='st'>"Russia"</span>), <span class='kw'>bar</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: In poppr version 2.0, bar is deprecated. Please use plot.</span></div><div class='img'><img src='mlg-5.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt;        MLG.2 MLG.3 MLG.4 MLG.5 MLG.9 MLG.11 MLG.12 MLG.13 MLG.17 MLG.19 MLG.20
 #&gt; USA        2     4     1     1    13      2      1      1      4      1      1
 #&gt; Russia     0     0     0     0     0      0      0      0      0      0      0
 #&gt;        MLG.21 MLG.22 MLG.23 MLG.41 MLG.42 MLG.43 MLG.44 MLG.49 MLG.51 MLG.56
@@ -679,17 +676,17 @@ the <code>vegan</code> package.</p>
 #&gt; Russia       0       0       0       0       0       0</div><div class='input'>
 <span class='co'># An exercise in subsetting the output of mlg.table and mlg.vector.</span>
 <span class='co'># First, get the indices of each MLG duplicated across populations.</span>
-<span class='kw'>inds</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.crosspop</a></span>(<span class='kw'>H3N2</span>, quiet = <span class='fl'>FALSE</span>, indexreturn = <span class='fl'>TRUE</span>)
+<span class='no'>inds</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.crosspop</span>(<span class='no'>H3N2</span>, <span class='kw'>quiet</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>indexreturn</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='co'># Since the columns of the table from mlg.table are equal to the number of</span>
 <span class='co'># MLGs, we can subset with just the columns.</span>
-<span class='kw'>H.sub</span> <span class='op'>&lt;-</span> <span class='kw'>H.tab</span>[, <span class='kw'>inds</span>]
+<span class='no'>H.sub</span> <span class='kw'>&lt;-</span> <span class='no'>H.tab</span>[, <span class='no'>inds</span>]
 
 <span class='co'># We can also do the same by using the mlgsub flag.</span>
-<span class='kw'>H.sub</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/poppr/man/mlg.html'>mlg.table</a></span>(<span class='kw'>H3N2</span>, mlgsub = <span class='kw'>inds</span>)</div><div class='img'><img src='mlg-6.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='no'>H.sub</span> <span class='kw'>&lt;-</span> <span class='fu'>mlg.table</span>(<span class='no'>H3N2</span>, <span class='kw'>mlgsub</span> <span class='kw'>=</span> <span class='no'>inds</span>)</div><div class='img'><img src='mlg-6.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># We can subset the original data set using the output of mlg.vector to</span>
 <span class='co'># analyze only the MLGs that are duplicated across populations. </span>
-<span class='kw'>new.H</span> <span class='op'>&lt;-</span> <span class='kw'>H3N2</span>[<span class='kw'>H.vec</span> <span class='op'>%in%</span> <span class='kw'>inds</span>, ]
+<span class='no'>new.H</span> <span class='kw'>&lt;-</span> <span class='no'>H3N2</span>[<span class='no'>H.vec</span> <span class='kw'>%in%</span> <span class='no'>inds</span>, ]
 
 <span class='co'># }</span></div></pre>
   </div>
@@ -707,7 +704,7 @@ the <code>vegan</code> package.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
